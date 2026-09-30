@@ -4,12 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Star } from "lucide-react";
-import { Plus_Jakarta_Sans } from "next/font/google";
-
-const font = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 /* ---- Edit extensions here if any of yours are not .png ---- */
 const p = (file: string) => encodeURI(`/heroImages/${file}`);
@@ -71,9 +65,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section
-      className={` relative h-[calc(100vh+90px)] min-h-[720px] w-full overflow-hidden bg-[#0039E3] text-white`}
-    >
+    <section className="relative h-[calc(100vh+90px)] min-h-[720px] w-full overflow-hidden bg-[#0039E3] text-white">
       {/* Grid background */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -218,7 +210,7 @@ export default function HeroSection() {
           <Star className="h-3.5 w-3.5 fill-[#CCFF00] text-[#CCFF00]" />
         </div>
         <div className="mt-2 flex items-center">
-          {AVATAR_COLORS.map((c:any, i:any) => (
+          {AVATAR_COLORS.map((c: any, i: any) => (
             <div
               key={i}
               className={`-ml-2 h-10 w-10 first:ml-0 rounded-full border-2 border-white bg-gradient-to-br ${c}`}
