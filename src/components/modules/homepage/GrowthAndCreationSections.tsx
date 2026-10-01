@@ -178,7 +178,6 @@ export default function GrowthAndCreationSections() {
                 </div>
               </div>
 
-              {/* Student: % values on mobile, original values from sm up */}
               <div className="absolute bottom-[10.7%] right-[2.9%] z-10 h-[98%] w-[88%] sm:bottom-15 sm:right-4">
                 <Image
                   src={heroImage}
@@ -189,8 +188,7 @@ export default function GrowthAndCreationSections() {
                 />
               </div>
 
-              {/* Spring: % width on mobile, original 215px from sm up */}
-              <div className="absolute right-[-7%] top-[15%] z-50 h-[36%] w-[38%] sm:w-[215px]">
+              <div className="absolute right-[-7%] top-[15%] z-40 h-[36%] w-[38%] sm:w-[215px]">
                 <Image
                   src={spring}
                   alt="3D Green Spring"
@@ -244,7 +242,6 @@ export default function GrowthAndCreationSections() {
                 </span>
               </div>
 
-              {/* Instructor: % values on mobile, original px values from sm up */}
               <div className="absolute bottom-[9.5%] -left-[6%] z-[5] h-[91.6%] w-[105.8%] sm:bottom-13 sm:h-[500px] sm:w-[550px]">
                 <Image
                   src={femaleImage}
