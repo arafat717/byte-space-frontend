@@ -1,6 +1,7 @@
 "use client";
 
 import Image, { type ImageProps } from "next/image";
+import Link from "next/link";
 import img1 from "../../../../public/heroImages/Frame (12).png";
 import img2 from "../../../../public/heroImages/Frame (13).png";
 import img3 from "../../../../public/heroImages/Cone (3).png";
@@ -106,12 +107,12 @@ export default function CreatorCTASection() {
           course on the ByteSpace Course Library.
         </p>
 
-        <button
-          type="button"
+        <Link
+          href="/register"
           className="mt-10 rounded-full bg-[#D4FB20] px-6 py-3 text-sm font-medium text-[#242528] transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Join as Creator
-        </button>
+        </Link>
       </div>
     </section>
   );

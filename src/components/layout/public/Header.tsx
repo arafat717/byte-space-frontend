@@ -40,8 +40,8 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4 text-sm">
-          <Link href="#">Sign In</Link>
-          <Link href="#">
+          <Link href="/login">Sign In</Link>
+          <Link href="/register">
             <Button className="px-4 py-2 bg-lime-400 text-black rounded-full font-semibold">
               Join Us
             </Button>

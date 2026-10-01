@@ -134,12 +134,15 @@ export default function HeroSection() {
 
           <div className="flex items-center gap-3 text-base font-normal md:gap-6">
             <Link
-              href="#"
+              href="/login"
               className="hidden hover:opacity-80 transition-opacity sm:inline"
             >
               Sign In
             </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity">
+            <Link
+              href="/register"
+              className="hover:opacity-80 transition-opacity"
+            >
               Join Us
             </Link>
             <button
