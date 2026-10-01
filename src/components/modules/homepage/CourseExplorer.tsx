@@ -1,6 +1,4 @@
 "use client";
-
-import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -18,7 +16,6 @@ interface Course {
 }
 
 const CATEGORY_ROWS = [
-  // Row 1 (8 items)
   [
     "Featured",
     "Music",
@@ -29,7 +26,6 @@ const CATEGORY_ROWS = [
     "UI/UX Design",
     "Creative Marketing",
   ],
-  // Row 2 (8 items)
   [
     "Digital Illustration",
     "Film & Video",
@@ -38,7 +34,6 @@ const CATEGORY_ROWS = [
     "Graphic Design",
     "Photography",
   ],
-  // Row 3 (5 items)
   ["Productivity", "Web Development", "Data Science", "Cooking"],
 ];
 
@@ -127,7 +122,6 @@ export default function CourseExplorer() {
   return (
     <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        {/* Title Header */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-[#040819] sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
             Discover Your Passion, <br className="hidden sm:inline" />
@@ -141,7 +135,6 @@ export default function CourseExplorer() {
           </p>
         </div>
 
-        {/* Category Pills */}
         <div className="mt-8 mb-20 flex flex-col items-center gap-4 max-w-8xl mx-auto">
           {CATEGORY_ROWS.map((row, rowIndex) => (
             <div
@@ -160,7 +153,6 @@ export default function CourseExplorer() {
                 );
               })}
 
-              {/* Append "+ More" directly to the last row */}
               {rowIndex === CATEGORY_ROWS.length - 1 && (
                 <button
                   type="button"
@@ -181,7 +173,6 @@ export default function CourseExplorer() {
               className="group flex flex-col justify-between overflow-hidden rounded-[32px] border border-[#CED0D3] bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
               <div>
-                {/* Thumbnail Image Container */}
                 <div className="relative h-56 w-full overflow-hidden rounded-[24px] bg-slate-100">
                   <Image
                     src={course.image}
@@ -190,7 +181,6 @@ export default function CourseExplorer() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
 
-                  {/* Three Separate Floating Frosted Glass Pills */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-1">
                     <span className="rounded-full bg-[#F6F6F699] px-2 md:px-3 py-1.5 text-[12px] font-medium text-[#4F4F4F] backdrop-blur-md">
                       {course.lessons} Lessons
@@ -204,7 +194,6 @@ export default function CourseExplorer() {
                   </div>
                 </div>
 
-                {/* Title, Rating & Author */}
                 <div className="mt-5 px-1">
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="text-xl font-semibold tracking-tight text-[#000000]  ">
@@ -231,10 +220,7 @@ export default function CourseExplorer() {
                   </p>
                 </div>
               </div>
-
-              {/* Middle Row: Level Tag & Overlapping Student Avatars */}
               <div className="mt-6 flex items-center space-x-3 px-1">
-                {/* Beginner Pill with Bar Chart Icon */}
                 <span className="flex items-center space-x-1.5 rounded-full bg-[#F5F5F6] px-3.5 py-1.5 text-xs font-semibold text-[#4B4C53]">
                   <svg
                     className="h-3.5 w-3.5 text-slate-700"
@@ -254,7 +240,6 @@ export default function CourseExplorer() {
                   <span>{course.level}</span>
                 </span>
 
-                {/* Overlapping Student Avatars */}
                 <div className="flex -space-x-2">
                   <Image
                     className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"

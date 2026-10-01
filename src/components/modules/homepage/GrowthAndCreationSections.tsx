@@ -66,7 +66,6 @@ function AvatarStack({
 export default function GrowthAndCreationSections() {
   return (
     <div className="relative w-full overflow-hidden bg-[#FAFAFC] text-slate-900 py-16 lg:py-24">
-      {/* Background soft glows */}
       <div className="pointer-events-none absolute -top-24 left-[28%] h-[420px] w-[620px] -translate-x-1/2 rounded-full bg-[#CBFC01]/45 blur-[130px]" />
       <div className="pointer-events-none absolute top-0 right-0 h-[480px] w-[480px] translate-x-1/4 rounded-full bg-[#C9D3FF]/60 blur-[140px]" />
       <div className="pointer-events-none absolute top-[48%] -left-24 h-[380px] w-[380px] rounded-full bg-[#C9D3FF]/40 blur-[130px]" />
@@ -74,9 +73,7 @@ export default function GrowthAndCreationSections() {
       <div className="pointer-events-none absolute bottom-0 -right-[12%] h-[520px] w-[520px] rounded-full bg-[#B8C6FF]/65 blur-[140px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12 space-y-24 lg:space-y-32">
-        {/* ================= SECTION 1: PROFESSIONAL GROWTH ================= */}
         <div className="grid grid-cols-1 items-center justify-center gap-12 lg:grid-cols-12 lg:gap-8">
-          {/* Left Text Column */}
           <div className="lg:col-span-6 space-y-8">
             <h1 className="text-3xl sm:text-[44px] font-semibold tracking-tight leading-[1.2] text-[#242528]">
               Your Path to Professional <br className="hidden sm:inline" />
@@ -91,7 +88,6 @@ export default function GrowthAndCreationSections() {
               need.
             </p>
 
-            {/* Stats */}
             <div className="pt-3 flex items-center space-x-10 sm:space-x-12">
               {[
                 { value: "12K", label: "Students" },
@@ -110,12 +106,9 @@ export default function GrowthAndCreationSections() {
             </div>
           </div>
 
-          {/* Right: overlapping composition */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[560px] aspect-square">
-              {/* Course card (behind student) */}
               <div className="absolute left-0 top-0 z-0 w-[66%] rounded-[28px] border border-[#CED0D3] bg-white p-3.5 shadow-sm">
-                {/* Thumbnail */}
                 <div className="relative h-36 sm:h-48 w-full overflow-hidden rounded-[20px] bg-slate-100">
                   <Image
                     src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80"
@@ -135,8 +128,6 @@ export default function GrowthAndCreationSections() {
                     </span>
                   </div>
                 </div>
-
-                {/* Details */}
                 <div className="mt-4 px-1">
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="text-base sm:text-lg font-semibold tracking-tight text-slate-900">
@@ -154,13 +145,10 @@ export default function GrowthAndCreationSections() {
                       </svg>
                     </div>
                   </div>
-
                   <p className="mt-0.5 text-xs text-[#4F4F4F]">
                     by <span className="text-[#003BE2]">purepearl studio</span>
                   </p>
                 </div>
-
-                {/* Level + avatars */}
                 <div className="mt-3 flex items-center space-x-3 px-1">
                   <span className="flex items-center space-x-1.5 rounded-full bg-[#F5F5F6] px-3 py-1 text-[11px] font-semibold text-[#4B4C53]">
                     <svg
@@ -182,8 +170,6 @@ export default function GrowthAndCreationSections() {
                   </span>
                   <AvatarStack count={3} badge="26+" />
                 </div>
-
-                {/* Price */}
                 <div className="mt-3 px-1">
                   <span className="text-lg font-bold text-[#003BE2]">$25</span>
                   <span className="text-[11px] text-[#4F4F4F] font-medium">
@@ -191,8 +177,6 @@ export default function GrowthAndCreationSections() {
                   </span>
                 </div>
               </div>
-
-              {/* Student cutout (overlaps card) */}
               <div className="absolute bottom-15 right-4 z-10 h-[98%] w-[88%]">
                 <Image
                   src={heroImage}
@@ -202,8 +186,6 @@ export default function GrowthAndCreationSections() {
                   className="object-contain object-bottom drop-shadow-xl"
                 />
               </div>
-
-              {/* Lime spring */}
               <div className="absolute  right-[-7%] top-[15%] z-50 h-[36%] w-[215px]">
                 <Image
                   src={spring}
@@ -212,8 +194,6 @@ export default function GrowthAndCreationSections() {
                   className="object-contain"
                 />
               </div>
-
-              {/* Learning Progress card */}
               <div className="absolute right-0 top-[40%] z-30 w-[40%] rounded-2xl border border-slate-100 bg-white p-3 sm:p-4 shadow-xl">
                 <p className="text-[10px] sm:text-xs font-medium text-slate-500">
                   Learning Progress
@@ -228,13 +208,9 @@ export default function GrowthAndCreationSections() {
             </div>
           </div>
         </div>
-
-        {/* ================= SECTION 2: CREATE & MANAGE COURSES ================= */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-          {/* Left Visual Composition */}
           <div className="lg:col-span-6 order-2 lg:order-1 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[520px] aspect-[1/1.05]">
-              {/* Total Revenue (tucked behind instructor) */}
               <div className="absolute left-0 top-[3%] z-0 w-[44%] rounded-2xl bg-[#003BE2] p-3 sm:p-4 text-white shadow-xl">
                 <p className="text-[10px] sm:text-xs text-blue-100">
                   Total Revenue{" "}
@@ -249,8 +225,6 @@ export default function GrowthAndCreationSections() {
                   <div className="h-full w-[55%] bg-white rounded-full" />
                 </div>
               </div>
-
-              {/* Year to Date */}
               <div className="absolute left-0 top-[27%] z-5  rounded-2xl bg-[#003BE2] py-3 px-1 sm:p-4  text-white shadow-xl">
                 <p className="text-[10px] sm:text-xs text-blue-100">
                   Year to Date
@@ -263,8 +237,6 @@ export default function GrowthAndCreationSections() {
                   +125
                 </span>
               </div>
-
-              {/* Instructor */}
               <div className="absolute bottom-13 -left-[6%] z-[5] h-[500px] w-[550px]">
                 <Image
                   src={femaleImage}
@@ -273,8 +245,6 @@ export default function GrowthAndCreationSections() {
                   className="object-contain object-bottom drop-shadow-xl"
                 />
               </div>
-
-              {/* Lime spring */}
               <div className="absolute left-[52%] top-[10%] z-20 h-[34%] w-[36%]">
                 <Image
                   src={spring2}
@@ -283,8 +253,6 @@ export default function GrowthAndCreationSections() {
                   className="object-contain"
                 />
               </div>
-
-              {/* Happy Students */}
               <div className="absolute right-0 bottom-[8%] z-30 w-[50%] rounded-2xl border border-slate-100 bg-white p-3 sm:p-4 shadow-xl">
                 <p className="text-[10px] sm:text-xs font-medium text-slate-500">
                   Happy Students
@@ -306,8 +274,6 @@ export default function GrowthAndCreationSections() {
               </div>
             </div>
           </div>
-
-          {/* Right Content Column */}
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
             <h2 className="text-3xl sm:text-[44px] font-semibold tracking-tight leading-[1.2] text-[#242528]">
               Create & Manage <br />

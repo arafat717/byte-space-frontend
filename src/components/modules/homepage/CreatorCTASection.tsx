@@ -1,25 +1,28 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
+import img1 from "../../../../public/heroImages/Frame (12).png";
+import img2 from "../../../../public/heroImages/Frame (13).png";
+import img3 from "../../../../public/heroImages/Cone (3).png";
+import img4 from "../../../../public/heroImages/Cone (4).png";
 
-/* ------------------------------------------------------------------
-   Put your images in /public/ctaImages/ using these file names,
-   or just change the paths below to match your actual files.
-------------------------------------------------------------------- */
+import img5 from "../../../../public/heroImages/Cone (5).png";
+import img6 from "../../../../public/heroImages/Cone (6).png";
+import img7 from "../../../../public/heroImages/Frame (14).png";
+
 const IMG = {
-  limeSquiggleTopLeft: "/ctaImages/lime-squiggle-1.png",
-  whiteSquiggle: "/ctaImages/white-squiggle.png",
-  whiteCone: "/ctaImages/white-cone.png",
-  limeTorus: "/ctaImages/lime-torus.png",
-  limePyramid: "/ctaImages/lime-pyramid.png",
-  whiteCup: "/ctaImages/white-cup.png",
-  limeSquiggleBottomRight: "/ctaImages/lime-squiggle-2.png",
+  limeSquiggleTopLeft: img1,
+  whiteSquiggle: img2,
+  whiteCone: img3,
+  limeTorus: img4,
+  limePyramid: img5,
+  whiteCup: img6,
+  limeSquiggleBottomRight: img7,
 };
 
 type ShapeProps = {
-  src: string;
+  src: ImageProps["src"];
   alt: string;
-  /** positioning + sizing classes for the wrapper */
   className: string;
 };
 
@@ -36,7 +39,6 @@ function Shape({ src, alt, className }: ShapeProps) {
 export default function CreatorCTASection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#003BE2] text-white">
-      {/* Grid lines */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -47,12 +49,11 @@ export default function CreatorCTASection() {
         }}
       />
 
-      {/* ===== Decorative images ===== */}
       {/* Top left */}
       <Shape
         src={IMG.limeSquiggleTopLeft}
         alt="Lime 3D squiggle"
-        className="-left-8 -top-8 h-44 w-44"
+        className="-left-2 -top-4 h-44 w-44"
       />
       <Shape
         src={IMG.whiteSquiggle}
@@ -64,12 +65,12 @@ export default function CreatorCTASection() {
       <Shape
         src={IMG.whiteCone}
         alt="White 3D cone"
-        className="-left-4 top-[50%] h-40 w-32"
+        className="-left-1 top-[50%] h-40 w-32"
       />
       <Shape
         src={IMG.limeTorus}
         alt="Lime 3D torus"
-        className="-bottom-24 left-[5%] h-64 w-64"
+        className="-bottom-15 left-[5%] h-64 w-64"
       />
 
       {/* Top right */}
@@ -81,24 +82,23 @@ export default function CreatorCTASection() {
       <Shape
         src={IMG.whiteCup}
         alt="White 3D cylinder"
-        className="-right-8 top-8 h-[300px] w-[200px]"
+        className="-right-3 top-8 h-[300px] w-[200px]"
       />
 
       {/* Bottom right */}
       <Shape
         src={IMG.limeSquiggleBottomRight}
         alt="Lime 3D squiggle"
-        className="-bottom-10 right-[4%] h-52 w-52"
+        className="-bottom-11 right-[4%] h-52 w-52"
       />
 
-      {/* ===== Content ===== */}
       <div className="relative z-10 mx-auto flex min-h-[420px] max-w-3xl flex-col items-center justify-center px-6 py-20 text-center lg:min-h-[490px]">
-        <h2 className="text-3xl font-semibold leading-[1.2] tracking-tight sm:text-4xl lg:text-5xl">
+        <h2 className="text-3xl font-semibold leading-[1.2] text-[#F5F5F6] tracking-tight sm:text-4xl lg:text-[44px]">
           Unlock Your Potential as a <br className="hidden sm:inline" />
           Creator with ByteSpace
         </h2>
 
-        <p className="mt-10 max-w-3xl text-sm leading-7 text-white/90 sm:text-[15px]">
+        <p className="mt-10 max-w-5xl text-[18px] leading-7 text-[#F5F5F6] sm:text-[18px]">
           Experience the collaboration of numerous creators and an expanding
           selection of courses. Register now and become a part of a community
           comprising over 10,000 local and international creators. Utilize our
@@ -108,7 +108,7 @@ export default function CreatorCTASection() {
 
         <button
           type="button"
-          className="mt-10 rounded-full bg-[#D4FB20] px-6 py-3 text-sm font-medium text-slate-900 transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="mt-10 rounded-full bg-[#D4FB20] px-6 py-3 text-sm font-medium text-[#242528] transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Join as Creator
         </button>

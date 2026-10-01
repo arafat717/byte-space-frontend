@@ -11,15 +11,14 @@ const IMAGES = {
   bag: p("Vector (1).png"),
   person: p("hero-image.png"),
   arch: p("Ellipse 7.png"),
-  ring: p("Cone (1).png"), // white donut
-  pyramid: p("Cone.png"), // white triangle
-  limeSpring: p("Frame (2).png"), // lime squiggle (left)
-  whiteSpringSmall: p("Frame (3).png"), // small white squiggle (left)
-  whiteSpringBig: p("Frame (4).png"), // big white squiggle (right)
-  cylinder: p("Mask Group.png"), // lime cylinder (top right)
+  ring: p("Cone (1).png"),
+  pyramid: p("Cone.png"),
+  limeSpring: p("Frame (2).png"),
+  whiteSpringSmall: p("Frame (3).png"),
+  whiteSpringBig: p("Frame (4).png"),
+  cylinder: p("Mask Group.png"),
 };
 
-/* Decorative image. Size + position come from className. */
 function Deco({
   src,
   className,
@@ -43,14 +42,31 @@ function Deco({
   );
 }
 
-const AVATAR_COLORS = [
-  "from-amber-300 to-orange-500",
-  "from-pink-300 to-rose-500",
-  "from-stone-300 to-stone-600",
-  "from-sky-300 to-indigo-500",
-  "from-emerald-300 to-teal-600",
-  "from-violet-300 to-purple-600",
-  "from-yellow-200 to-amber-600",
+const AVATARS = [
+  {
+    id: "student-1",
+    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80",
+  },
+  {
+    id: "student-2",
+    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&q=80",
+  },
+  {
+    id: "student-3",
+    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&q=80",
+  },
+  {
+    id: "student-4",
+    src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=64&q=80",
+  },
+  {
+    id: "student-5",
+    src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=64&q=80",
+  },
+  {
+    id: "student-6",
+    src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&q=80",
+  },
 ];
 
 export default function HeroSection() {
@@ -66,7 +82,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[calc(100vh+90px)] min-h-[720px] w-full overflow-hidden bg-[#0039E3] text-white">
-      {/* Grid background */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -77,7 +92,6 @@ export default function HeroSection() {
         }}
       />
 
-      {/* ================= HEADER ================= */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
@@ -86,7 +100,6 @@ export default function HeroSection() {
         }`}
       >
         <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-4 md:px-6 xl:px-0">
-          {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
               src={IMAGES.logo}
@@ -98,7 +111,6 @@ export default function HeroSection() {
             />
           </Link>
 
-          {/* Nav */}
           <nav className="hidden md:flex items-center gap-6 text-base">
             <Link
               href="#"
@@ -120,7 +132,6 @@ export default function HeroSection() {
             </Link>
           </nav>
 
-          {/* Right */}
           <div className="flex items-center gap-3 text-base font-normal md:gap-6">
             <Link
               href="#"
@@ -181,9 +192,6 @@ export default function HeroSection() {
           ))}
         </nav>
       </header>
-
-      {/* ================= DECORATIONS (edge anchored) ================= */}
-      {/* Left side */}
       <Deco
         src={IMAGES.limeSpring}
         className="left-0 top-[18%] h-auto w-[clamp(90px,13.5vw,385px)] max-md:hidden"
@@ -194,10 +202,9 @@ export default function HeroSection() {
       />
       <Deco
         src={IMAGES.ring}
-        className="left-[10.7%] z-70 bottom-[2%] h-auto w-[clamp(110px,20.4vw,320px)] max-md:hidden"
+        className="left-[10.7%] z-40 bottom-[2%] h-auto w-[clamp(110px,20.4vw,320px)] max-md:hidden"
       />
 
-      {/* Right side */}
       <Deco
         src={IMAGES.cylinder}
         className="right-0 top-[18%] h-auto w-[clamp(90px,11.5vw,290px)] max-md:hidden"
@@ -211,7 +218,6 @@ export default function HeroSection() {
         className="right-[12.5%] z-10 bottom-[3%] h-auto w-[clamp(90px,15.5vw,360px)] max-md:hidden"
       />
 
-      {/* ================= ARCH + PERSON (bottom center, sized by screen height) ================= */}
       <Deco
         src={IMAGES.arch}
         className="bottom-0 left-1/2 -translate-x-1/2 h-[50vh] w-auto max-w-none max-xl:h-[42vh] max-md:h-[36vh]"
@@ -221,17 +227,12 @@ export default function HeroSection() {
         priority
         className="bottom-0 left-1/2 -translate-x-1/2 z-[5] h-[57vh] w-auto max-w-none max-xl:h-[48vh] max-md:h-[43vh]"
       />
-
-      {/* ================= FLOATING CARDS (offset from center) ================= */}
-      {/* UI/UX Design */}
       <div className="hidden xl:block absolute z-10 bottom-[34vh] left-[calc(50%-328px)] w-[208px] rounded-xl bg-white px-4 py-3.5 text-gray-900 shadow-sm">
         <p className="text-base font-medium leading-tight">UI/UX Design</p>
         <p className="mt-1 text-[11px] text-gray-500">
           200 Courses <span className="mx-1">•</span> 1000+ Students
         </p>
       </div>
-
-      {/* Learning Progress */}
       <div className="hidden xl:block absolute z-10 bottom-[23.5vh] left-[calc(50%+122px)] w-[232px] rounded-xl bg-white px-4 pt-4 pb-5 text-gray-900 shadow-sm">
         <p className="text-[13px] font-medium text-gray-800">
           Learning Progress
@@ -243,8 +244,6 @@ export default function HeroSection() {
           <div className="h-full w-[55%] rounded-full bg-[#CCFF00]" />
         </div>
       </div>
-
-      {/* Happy Students */}
       <div className="hidden xl:block absolute z-10 bottom-[6.5vh] left-[calc(50%-392px)] w-[258px] rounded-xl bg-white px-4 py-3.5 text-gray-900 shadow-sm">
         <p className="text-base font-medium leading-tight">Happy Students</p>
         <div className="mt-1 flex items-center gap-1 text-[12px] text-gray-600">
@@ -253,10 +252,14 @@ export default function HeroSection() {
           <Star className="h-3.5 w-3.5 fill-[#CCFF00] text-[#CCFF00]" />
         </div>
         <div className="mt-2 flex items-center">
-          {AVATAR_COLORS.map((color) => (
-            <div
-              key={color}
-              className={`-ml-2 h-10 w-10 first:ml-0 rounded-full border-2 border-white bg-gradient-to-br ${color}`}
+          {AVATARS.map((avatar) => (
+            <Image
+              key={avatar.id}
+              src={avatar.src}
+              alt="Student"
+              width={40}
+              height={40}
+              className="-ml-2 h-10 w-10 first:ml-0 rounded-full border-2 border-white object-cover"
             />
           ))}
           <div className="-ml-2 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#CCFF00] text-xs font-semibold text-gray-900">
@@ -264,8 +267,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* ================= TEXT + SEARCH ================= */}
       <div className="absolute inset-x-0 top-[max(130px,16.5%)] z-10 flex flex-col items-center px-6 text-center max-md:top-[104px] max-md:px-4">
         <h1 className="font-semibold leading-[1.15] tracking-tight text-[clamp(2.25rem,5.27vw,72px)] max-md:text-[clamp(2rem,8vw,3rem)]">
           Get Access to Hundreds <br /> Courses Available

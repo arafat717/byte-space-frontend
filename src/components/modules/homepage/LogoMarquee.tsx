@@ -33,9 +33,7 @@ const logos = [
 export default function LogoMarquee() {
   return (
     <div className="w-full bg-[#F5F5F6] py-8 overflow-hidden">
-      {/* 1. Mobile-Only View: Infinite Right-to-Left Auto-Scroll (2 visible at a time) */}
       <div className="relative flex md:hidden w-full overflow-hidden [mask-image:_linear-gradient(to_right,_transparent_0,_black_64px,_black_calc(100%-64px),_transparent_100%)]">
-        {/* Track 1 */}
         <div className="flex shrink-0 animate-marquee items-center justify-around gap-8 min-w-full">
           {logos.map((logo) => (
             <div
@@ -46,8 +44,6 @@ export default function LogoMarquee() {
             </div>
           ))}
         </div>
-
-        {/* Track 2 (Duplicated for seamless loop) */}
         <div
           className="flex shrink-0 animate-marquee items-center justify-around gap-8 min-w-full"
           aria-hidden="true"
@@ -62,8 +58,6 @@ export default function LogoMarquee() {
           ))}
         </div>
       </div>
-
-      {/* 2. Desktop-Only View: Static, Clean Row Grid */}
       <div className="hidden md:flex mx-auto max-w-7xl items-center justify-between gap-8 py-10 px-8">
         {logos.map((logo) => (
           <div

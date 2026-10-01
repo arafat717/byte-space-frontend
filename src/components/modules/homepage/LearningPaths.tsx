@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import icon1 from "../../../../public/heroImages/Vector.svg";
 import icon2 from "../../../../public/heroImages/Vector (1).svg";
@@ -65,7 +64,6 @@ export default function LearningPaths() {
   return (
     <section className="w-full bg-white px-6 py-20 md:px-12 lg:px-20">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */}
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-[#040819] sm:text-4xl md:text-[36px] md:leading-tight">
             Explore Diverse Learning Paths at Bytespace
@@ -77,8 +75,6 @@ export default function LearningPaths() {
             and explore our carefully curated categories.
           </p>
         </div>
-
-        {/* Category Cards Grid */}
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
           {CATEGORIES.map((item) => (
             <Link
@@ -86,12 +82,9 @@ export default function LearningPaths() {
               href={item.href}
               className="group flex flex-col items-center justify-center rounded-[24px] border border-[#CED0D3] bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md"
             >
-              {/* Neon Green Circle Icon Badge */}
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#D4FB20] transition-transform duration-200 group-hover:scale-105">
                 {item.icon}
               </div>
-
-              {/* Title */}
               <span className="mt-5 text-center text-[20px] font-medium text-[#242528] transition-colors group-hover:text-slate-950">
                 {item.title}
               </span>

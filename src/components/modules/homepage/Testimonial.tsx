@@ -43,26 +43,21 @@ const TESTIMONIALS: Testimonial[] = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-20 px-6 sm:px-12 lg:px-20">
-      {/* Background Radial Glow Effects */}
-      <div className="absolute top-0 left-0 h-[450px] w-[450px] -translate-x-1/3 -translate-y-1/3 rounded-full bg-[#D4FB20]/20 blur-[130px] pointer-events-none" />
-      <div className="absolute top-1/4 right-0 h-[450px] w-[450px] translate-x-1/3 rounded-full bg-[#D4FB20]/25 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 h-[350px] w-[350px] -translate-x-1/4 translate-y-1/4 rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
+    <section className="relative w-full overflow-hidden bg-[#F9F9FA] py-30 px-6 sm:px-12 lg:px-20">
+      <div className="pointer-events-none absolute left-[58%] top-[20%] h-[420px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4FB20]/50 blur-[110px]" />
+      <div className="pointer-events-none absolute right-0 top-[34%] h-[320px] w-[320px] translate-x-1/3 rounded-full bg-[#D4FB20]/45 blur-[110px]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[420px] w-[420px] -translate-x-1/3 translate-y-1/4 rounded-full bg-[#8FA8FF]/50 blur-[110px]" />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Header Section */}
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-16">
-          {/* Main Title (Left) */}
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[1.15] font-extrabold tracking-tight text-slate-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[1.15] font-semibold tracking-tight text-[#000000]">
               Discover What Our <br className="hidden sm:inline" />
               Community Is Saying
             </h2>
           </div>
-
-          {/* Subtitle Description (Right) */}
           <div className="lg:col-span-6">
-            <p className="text-xs sm:text-sm leading-relaxed text-slate-500 max-w-xl">
+            <p className="text-xs sm:text-[18px] leading-relaxed text-[#4F4F4F] max-w-xl">
               At ByteSpace, our vibrant community of learners and creators is at
               the heart of what we do. Hear directly from those who have
               experienced the transformative journey of learning and creating on
@@ -71,17 +66,14 @@ export default function TestimonialsSection() {
             </p>
           </div>
         </div>
-
-        {/* Testimonials Cards Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 items-start gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex flex-col justify-between rounded-[28px] border border-slate-100 bg-white/90 p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md backdrop-blur-sm"
+              className="flex flex-col justify-between rounded-[28px] bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <div>
-                {/* User Avatar */}
-                <div className="relative h-14 w-14 overflow-hidden rounded-full bg-slate-100">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full bg-slate-100">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -89,19 +81,15 @@ export default function TestimonialsSection() {
                     className="object-cover"
                   />
                 </div>
-
-                {/* Name & Role */}
                 <div className="mt-5">
-                  <h3 className="text-base font-extrabold text-slate-900">
+                  <h3 className="text-[20px] font-semibold text-[#000000]">
                     {testimonial.name}
                   </h3>
-                  <p className="text-xs font-medium text-[#003BE2] mt-0.5">
+                  <p className="text-[18px] font-normal text-[#003BE2] mt-0.5">
                     {testimonial.role}
                   </p>
                 </div>
-
-                {/* Quote Text */}
-                <p className="mt-6 text-xs sm:text-[13px] leading-relaxed text-slate-500 font-normal">
+                <p className="mt-6 text-xs sm:text-[18px] leading-relaxed text-[#4F4F4F] font-normal">
                   {testimonial.quote}
                 </p>
               </div>

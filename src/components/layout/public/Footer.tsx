@@ -8,20 +8,14 @@ export default function Footer() {
     <footer className="w-full bg-white px-6 py-12 text-slate-700 md:px-16 lg:px-24">
       <div className="mx-auto max-w-[1280px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-          {/* Left Section: Logo, Newsletter & Description */}
           <div className="flex flex-col space-y-6 lg:col-span-5">
-            {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 w-fit">
               <Image src={footerLogo} alt="ByteSpace" width={170} height={37} />
             </Link>
-
-            {/* Newsletter Prompt */}
             <p className="text-sm text-[#242528] max-w-md leading-relaxed">
               Stay Up to date with our latest features and releases by joining
               our newsletter.
             </p>
-
-            {/* Form Input & Button */}
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2"
@@ -39,17 +33,12 @@ export default function Footer() {
                 Search
               </button>
             </form>
-
-            {/* Privacy Legal Note */}
             <p className="text-[12px] text-[#242528] max-w-xs leading-normal">
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates from our company.
             </p>
           </div>
-
-          {/* Right Section: Navigation Links Columns */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:col-span-7 pt-2">
-            {/* Column 1 */}
             <div className="flex flex-col space-y-3.5 text-sm text-[#242528]">
               <Link href="/courses" className="hover:text-slate-900 transition">
                 Featured Courses
@@ -73,8 +62,6 @@ export default function Footer() {
                 Design
               </Link>
             </div>
-
-            {/* Column 2 */}
             <div className="flex flex-col space-y-3.5 text-sm text-[#242528]">
               <Link
                 href="/development"
@@ -101,8 +88,6 @@ export default function Footer() {
                 Sport
               </Link>
             </div>
-
-            {/* Column 3 */}
             <div className="flex flex-col space-y-3.5 text-sm text-[#242528]">
               <Link
                 href="/become-a-creator"
@@ -128,8 +113,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Divider & Bottom Footer */}
         <div className="mt-16 border-t border-slate-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#242528]">
           <p>© 2023 ByteSpace. All rights reserved.</p>
 
