@@ -230,7 +230,7 @@ function CourseCollage() {
       <Shape
         src={IMG.squiggle}
         alt="White squiggle"
-        className="-right-[4%] top-[60%] z-20 h-[20%] w-[26%]"
+        className="-right-[4%] top-[45%] z-20 h-[40%] w-[36%]"
       />
     </div>
   );

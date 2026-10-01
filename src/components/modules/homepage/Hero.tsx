@@ -193,6 +193,13 @@ export default function HeroSection() {
               {item}
             </Link>
           ))}
+          <Link
+            href="/login"
+            className="border-b border-white/15 py-3 last:border-0"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Sign In
+          </Link>
         </nav>
       </header>
       <Deco

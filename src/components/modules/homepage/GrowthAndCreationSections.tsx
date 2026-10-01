@@ -80,7 +80,7 @@ export default function GrowthAndCreationSections() {
               Growth Starts Here!
             </h1>
 
-            <p className="text-[18px] leading-relaxed text-[#4B4C53] max-w-md">
+            <p className="text-base sm:text-[18px] leading-relaxed text-[#4B4C53] max-w-md">
               Explore our curated selection of courses tailored to enhance your
               capabilities and accelerate your career journey. Whether you are
               looking to sharpen specific skills, gain industry expertise, or
@@ -109,7 +109,7 @@ export default function GrowthAndCreationSections() {
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[560px] aspect-square">
               <div className="absolute left-0 top-0 z-0 w-[66%] rounded-[28px] border border-[#CED0D3] bg-white p-3.5 shadow-sm">
-                <div className="relative h-36 sm:h-48 w-full overflow-hidden rounded-[20px] bg-slate-100">
+                <div className="relative h-32 sm:h-48 w-full overflow-hidden rounded-[20px] bg-slate-100">
                   <Image
                     src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80"
                     alt="Course Thumbnail"
@@ -177,7 +177,9 @@ export default function GrowthAndCreationSections() {
                   </span>
                 </div>
               </div>
-              <div className="absolute bottom-15 right-4 z-10 h-[98%] w-[88%]">
+
+              {/* Student: % values on mobile, original values from sm up */}
+              <div className="absolute bottom-[10.7%] right-[2.9%] z-10 h-[98%] w-[88%] sm:bottom-15 sm:right-4">
                 <Image
                   src={heroImage}
                   alt="Student holding laptop"
@@ -186,7 +188,9 @@ export default function GrowthAndCreationSections() {
                   className="object-contain object-bottom drop-shadow-xl"
                 />
               </div>
-              <div className="absolute  right-[-7%] top-[15%] z-50 h-[36%] w-[215px]">
+
+              {/* Spring: % width on mobile, original 215px from sm up */}
+              <div className="absolute right-[-7%] top-[15%] z-50 h-[36%] w-[38%] sm:w-[215px]">
                 <Image
                   src={spring}
                   alt="3D Green Spring"
@@ -194,6 +198,7 @@ export default function GrowthAndCreationSections() {
                   className="object-contain"
                 />
               </div>
+
               <div className="absolute right-0 top-[40%] z-30 w-[40%] rounded-2xl border border-slate-100 bg-white p-3 sm:p-4 shadow-xl">
                 <p className="text-[10px] sm:text-xs font-medium text-slate-500">
                   Learning Progress
@@ -208,6 +213,7 @@ export default function GrowthAndCreationSections() {
             </div>
           </div>
         </div>
+
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-6 order-2 lg:order-1 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[520px] aspect-[1/1.05]">
@@ -237,7 +243,9 @@ export default function GrowthAndCreationSections() {
                   +125
                 </span>
               </div>
-              <div className="absolute bottom-13 -left-[6%] z-[5] h-[500px] w-[550px]">
+
+              {/* Instructor: % values on mobile, original px values from sm up */}
+              <div className="absolute bottom-[9.5%] -left-[6%] z-[5] h-[91.6%] w-[105.8%] sm:bottom-13 sm:h-[500px] sm:w-[550px]">
                 <Image
                   src={femaleImage}
                   alt="Instructor with tablet"
@@ -245,6 +253,7 @@ export default function GrowthAndCreationSections() {
                   className="object-contain object-bottom drop-shadow-xl"
                 />
               </div>
+
               <div className="absolute left-[52%] top-[10%] z-20 h-[34%] w-[36%]">
                 <Image
                   src={spring2}
@@ -280,7 +289,7 @@ export default function GrowthAndCreationSections() {
               Courses Easily.
             </h2>
 
-            <p className="text-[18px] leading-relaxed text-[#4B4C53] max-w-2xl">
+            <p className="text-base sm:text-[18px] leading-relaxed text-[#4B4C53] max-w-2xl">
               <span className="font-bold text-slate-800">ByteSpace</span>{" "}
               supports individuals or entities in the creation, publication, and
               administration of educational courses.
@@ -311,7 +320,7 @@ export default function GrowthAndCreationSections() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[18px] font-medium text-[#242528]">
+                  <span className="text-base sm:text-[18px] font-medium text-[#242528]">
                     {item}
                   </span>
                 </div>
