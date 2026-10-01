@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Search, Star, X } from "lucide-react";
 
-/* ---- Edit extensions here if any of yours are not .png ---- */
 const p = (file: string) => encodeURI(`/heroImages/${file}`);
 const IMAGES = {
   logo: p("Header_Logo.png"),
@@ -86,7 +85,7 @@ export default function HeroSection() {
             : "h-20 md:h-[120px] bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-4 md:px-6 xl:px-0">
+        <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-4 md:px-6 xl:px-0">
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
@@ -103,7 +102,7 @@ export default function HeroSection() {
           <nav className="hidden md:flex items-center gap-6 text-base">
             <Link
               href="#"
-              className="font-medium hover:opacity-80 transition-opacity"
+              className="font-semibold hover:opacity-80 transition-opacity"
             >
               Home
             </Link>
@@ -190,7 +189,7 @@ export default function HeroSection() {
         className="left-0 top-[18%] h-auto w-[clamp(90px,13.5vw,385px)] max-md:hidden"
       />
       <Deco
-        src={IMAGES.whiteSpringSmall}
+        src={IMAGES.whiteSpringBig}
         className="left-[12%] top-[39%] h-auto w-[clamp(90px,10vw,245px)] max-md:hidden"
       />
       <Deco
@@ -208,8 +207,8 @@ export default function HeroSection() {
         className="right-[12%] top-[39%] h-auto w-[clamp(90px,10vw,245px)] max-md:hidden"
       />
       <Deco
-        src={IMAGES.whiteSpringBig}
-        className="right-[12.5%] bottom-[3%] h-auto w-[clamp(90px,15.5vw,360px)] max-md:hidden"
+        src={IMAGES.whiteSpringSmall}
+        className="right-[12.5%] z-10 bottom-[3%] h-auto w-[clamp(90px,15.5vw,360px)] max-md:hidden"
       />
 
       {/* ================= ARCH + PERSON (bottom center, sized by screen height) ================= */}
@@ -254,10 +253,10 @@ export default function HeroSection() {
           <Star className="h-3.5 w-3.5 fill-[#CCFF00] text-[#CCFF00]" />
         </div>
         <div className="mt-2 flex items-center">
-          {AVATAR_COLORS.map((c: any, i: any) => (
+          {AVATAR_COLORS.map((color) => (
             <div
-              key={i}
-              className={`-ml-2 h-10 w-10 first:ml-0 rounded-full border-2 border-white bg-gradient-to-br ${c}`}
+              key={color}
+              className={`-ml-2 h-10 w-10 first:ml-0 rounded-full border-2 border-white bg-gradient-to-br ${color}`}
             />
           ))}
           <div className="-ml-2 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#CCFF00] text-xs font-semibold text-gray-900">
